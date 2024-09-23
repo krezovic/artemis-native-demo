@@ -1,0 +1,17 @@
+{
+  "resources":{
+  "includes":[{
+    "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.TransportConstants"},
+    "pattern":"\\QMETA-INF/io.netty.versions.properties\\E"
+  }, {
+    "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
+    "pattern":"\\QMETA-INF/services/java.net.spi.InetAddressResolverProvider\\E"
+  }, {
+    "condition":{"typeReachable":"org.apache.activemq.artemis.utils.VersionLoader"},
+    "pattern":"\\Qactivemq-version.properties\\E"
+  }, {
+    "condition":{"typeReachable":"org.apache.activemq.artemis.utils.ClassloadingUtil"},
+    "pattern":"\\Qorg.apache.activemq.artemis.api.jms.ActiveMQJMSClient.properties\\E"
+  }]},
+  "bundles":[]
+}
