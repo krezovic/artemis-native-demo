@@ -100,12 +100,29 @@
   "name":"[Ljava.util.Date;"
 },
 {
+  "condition":{"typeReachable":"org.apache.activemq.artemis.core.client.impl.ServerLocatorImpl"},
+  "name":"[Lorg.apache.activemq.artemis.api.core.Pair;"
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.utils.collections.LinkedListImpl"},
+  "name":"[Lorg.apache.activemq.artemis.utils.collections.LinkedListImpl$Iterator;"
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.utils.collections.PriorityLinkedListImpl"},
+  "name":"[Lorg.apache.activemq.artemis.utils.collections.LinkedListImpl;"
+},
+{
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.uri.BeanSupport"},
   "name":"[S"
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.uri.BeanSupport"},
   "name":"[Z"
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnection"},
+  "name":"io.netty.buffer.AbstractReferenceCountedByteBuf",
+  "fields":[{"name":"refCnt"}]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$1"},
@@ -118,29 +135,9 @@
   "methods":[{"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }]
 },
 {
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"io.netty.channel.ChannelInboundHandlerAdapter",
-  "methods":[{"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
-},
-{
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$1"},
   "name":"io.netty.channel.ChannelInboundHandlerAdapter",
   "methods":[{"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
-},
-{
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"io.netty.channel.ChannelInitializer",
-  "methods":[{"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }]
-},
-{
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"io.netty.channel.DefaultChannelPipeline$HeadContext",
-  "methods":[{"name":"bind","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"close","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, {"name":"connect","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, {"name":"deregister","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, {"name":"disconnect","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, {"name":"flush","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"read","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, {"name":"write","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object","io.netty.channel.ChannelPromise"] }]
-},
-{
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"io.netty.channel.DefaultChannelPipeline$TailContext",
-  "methods":[{"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
@@ -151,6 +148,11 @@
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.protocol.core.impl.ActiveMQClientProtocolManager"},
   "name":"io.netty.handler.codec.ByteToMessageDecoder",
   "methods":[{"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnection"},
+  "name":"io.netty.util.Recycler$DefaultHandle",
+  "fields":[{"name":"state"}]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.uri.URISchema"},
@@ -222,14 +224,14 @@
   "methods":[{"name":"initCause","parameterTypes":["java.lang.Throwable"] }]
 },
 {
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"java.nio.channels.spi.SelectorProvider",
-  "methods":[{"name":"openSocketChannel","parameterTypes":["java.net.ProtocolFamily"] }]
-},
-{
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.uri.URISchema"},
   "name":"javax.naming.Referenceable",
   "queryAllPublicMethods":true
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.api.core.RefCountMessage"},
+  "name":"org.apache.activemq.artemis.api.core.RefCountMessage",
+  "fields":[{"name":"durableRefCount"}, {"name":"refCount"}, {"name":"usageCount"}]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.uri.schema.serverLocator.TCPServerLocatorSchema"},
@@ -251,7 +253,7 @@
   "name":"org.apache.activemq.artemis.core.client.impl.ServerLocatorImpl",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
-  "methods":[{"name":"getHost","parameterTypes":["java.lang.String"] }, {"name":"getPort","parameterTypes":["java.lang.String"] }, {"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isHost","parameterTypes":["java.lang.String"] }, {"name":"isPort","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"getHost","parameterTypes":["java.lang.String"] }, {"name":"getPort","parameterTypes":["java.lang.String"] }, {"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUser","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isHost","parameterTypes":["java.lang.String"] }, {"name":"isPort","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUser","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.uri.schema.serverLocator.TCPServerLocatorSchema"},
@@ -283,10 +285,6 @@
   "name":"org.apache.activemq.artemis.core.remoting.impl.netty.ActiveMQFrameDecoder2"
 },
 {
-  "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},
-  "name":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$1"
-},
-{
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$1"},
   "name":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$ActiveMQClientChannelHandler"
 },
@@ -305,7 +303,7 @@
   "name":"org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
-  "methods":[{"name":"getHost","parameterTypes":["java.lang.String"] }, {"name":"getPort","parameterTypes":["java.lang.String"] }, {"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isHost","parameterTypes":["java.lang.String"] }, {"name":"isPort","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"getHost","parameterTypes":["java.lang.String"] }, {"name":"getPort","parameterTypes":["java.lang.String"] }, {"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isHost","parameterTypes":["java.lang.String"] }, {"name":"isPort","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }, {"name":"setPassword","parameterTypes":["java.lang.String"] }, {"name":"setUser","parameterTypes":["java.lang.String"] }]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.uri.URISchema"},
@@ -340,7 +338,7 @@
   "name":"org.apache.activemq.artemis.uri.schema.serverLocator.ConnectionOptions",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
-  "methods":[{"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }, {"name":"setHost","parameterTypes":["java.lang.String"] }, {"name":"setPort","parameterTypes":["int"] }]
+  "methods":[{"name":"getUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"getUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"getUser","parameterTypes":["java.lang.String"] }, {"name":"getUserInfo","parameterTypes":["java.lang.String"] }, {"name":"isUseEpoll","parameterTypes":["java.lang.String"] }, {"name":"isUseKQueue","parameterTypes":["java.lang.String"] }, {"name":"isUser","parameterTypes":["java.lang.String"] }, {"name":"isUserInfo","parameterTypes":["java.lang.String"] }, {"name":"setHost","parameterTypes":["java.lang.String"] }, {"name":"setPort","parameterTypes":["int"] }]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.uri.schema.serverLocator.AbstractServerLocatorSchema"},
@@ -356,9 +354,19 @@
   "fields":[{"name":"threadTaskDelta"}]
 },
 {
+  "condition":{"typeReachable":"org.apache.activemq.artemis.utils.ReferenceCounterUtil"},
+  "name":"org.apache.activemq.artemis.utils.ReferenceCounterUtil",
+  "fields":[{"name":"use"}]
+},
+{
   "condition":{"typeReachable":"org.apache.activemq.artemis.utils.actors.ProcessorBase"},
   "name":"org.apache.activemq.artemis.utils.actors.ProcessorBase",
   "fields":[{"name":"state"}]
+},
+{
+  "condition":{"typeReachable":"org.apache.activemq.artemis.utils.collections.PriorityLinkedListImpl"},
+  "name":"org.apache.activemq.artemis.utils.collections.PriorityLinkedListImpl",
+  "fields":[{"name":"size"}]
 },
 {
   "condition":{"typeReachable":"org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector"},

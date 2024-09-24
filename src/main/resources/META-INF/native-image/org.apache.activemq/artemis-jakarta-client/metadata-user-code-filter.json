@@ -1,5 +1,7 @@
 {
   "rules": [
+    {"includeClasses": "org.springframework.jms.connection.CachingConnectionFactory"},
+    {"includeClasses": "org.springframework.jms.connection.SingleConnectionFactory"},
     {"includeClasses": "org.apache.activemq.**"},
     {"excludeClasses": "org.apache.activemq.artemis.core.io.**"},
     {"excludeClasses": "org.apache.activemq.artemis.core.server.**"},
